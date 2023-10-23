@@ -1,0 +1,452 @@
+﻿@model Product 
+
+@{
+    ViewData["Title"] = "Sản phẩm " + Model.Product_Name;
+    var productSpec = ViewBag.ProductSpec as ProductSpec;
+    ViewData["UserID"] = ViewBag.UserID;
+    ViewData["UserName"] = ViewBag.UserName;
+    ViewData["CountCart"] = ViewBag.CountCart;
+
+}
+
+    @if (TempData["AddToCartSuccess"] != null)
+    {
+            <div class="container">
+                <div class="alert alert-success" style="font-size: 15px; margin: 20px 0px 10px 0px;"> @TempData["AddToCartSuccess"]</div>
+            </div>
+    }
+
+    <div class="nd-product-detail" style="margin: 50px 0px 50px;">
+        <div class="content-header container">
+                <nav aria-label="breadcrumb" class="breadcrumb-des">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index" class="breadcrumb-item-title">Trang chủ</a></li>
+                    <li class="breadcrumb-item"><a href="" class="breadcrumb-item-title">@ViewBag.productById</a></li>
+                    <li class="breadcrumb-item"><a href="" class="breadcrumb-item-title">@ViewBag.productById</a></li>
+                    <li class="breadcrumb-item active breadcrumb-item-des" aria-current="page">@Model.Product_Name</li>
+                </ol>
+                <hr>
+            </nav>
+        </div>
+
+        <div class="content-section container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="content-section-image">
+                        <img src="~/img/img-product/@Model.Product_ID-01.jpg" alt="" class="content-section-img-detail">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="content-section-nd-detail">
+                        <div class="content-detail-brand">
+                           @ViewBag.productById
+                        </div>
+                        <div class="content-detail-product-name">
+                            @Model.Product_Name
+                        </div>
+                        <div class="row content-detail-intro">
+                            <div class="col-lg-4 content-detail-origin">
+                                <span class="lb-detail">Xuất xứ: </span> <span  class="nd-detail">@Model.Product_Origin</span>
+                            </div>
+                            <div class="col-lg-4 content-detail-origin">
+                                <span class="lb-detail">Giới tính: </span> <span class="nd-detail">@Model.Product_Gender</span>
+                            </div>
+                            <div class="col-lg-4 content-detail-origin">
+                                <span class="lb-detail">Năm phát hành: </span> <span class="nd-detail">@Model.Product_ReleaseYear</span>
+                            </div>
+                        </div>
+                        <div class="content-detail-des">
+                            @Model.Product_Intro
+                        </div>
+                        <div class="content-detail-price">
+                            @Model.Product_Price.ToString("C0").Replace(",", ".").Substring(1) ₫
+                        </div>
+                        <div class="content-detail-styles">
+                            <span class="lb-styles-detail">Ram: </span> <span class="nd-styles-nd">@Model.Product_Style</span>
+                        </div>
+                        <div class="content-detail-capacity">
+                            <span class="lb-styles-detail">Khối lượng: </span> <span class="nd-styles-nd">@Model.Product_Volume</span>
+                        </div>
+                        <form method="post" asp-controller="Cart" asp-action="AddToCart">
+                            
+                            <input  type="hidden" value="@Model.Product_ID" class="Product_ID_Hiden" name="Proudct_ID" />
+                            <div class="conteng-detail-input-number">
+                                <span class="lb-styles-detail">Số lượng: </span> 
+                                <div class="input-number">
+                                    <button class="minus">-</button>
+                                    <input type="number" value="1" min="1" class="input-number-product" name="Product_Quantity">
+                                    <button class="plus">+</button>
+                                </div>
+                            </div>
+                            <div class="content-detail-add-to-card">
+                                <input type="submit" value="Thêm vào giỏ hàng" class="input-submit-add-card">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section-product-detail-des container">
+            <div class="row">
+                <div class="col-lg-11">
+                    <div class="product-tabcontrol">
+                        <hr style="margin: 10px 0px 10px;">
+                        <div class="tabs">
+                            <div class="tab-item active">
+                                Thông tin chi tiết
+                            </div>
+                            <div class="tab-item">
+                                Hướng dẫn sử dụng và bảo quản
+                            </div>
+                            <div class="tab-item">
+                                Đánh giá
+                            </div>
+                            <div class="line"></div>
+                        </div>
+            
+                        <!-- Tab content -->
+                        <div class="tab-content">
+                            <div class="tab-pane active">
+                                <div class="tab-product-detail">
+                                    <div class="tab-product-detail-header">Tổng quan về @Model.Product_Name</div>
+                                    <div class="tab-product-detail-des">
+                                        @productSpec.Product_Des
+                                    </div>
+                                    <div class="tab-product-detail-image">
+                                        <img class="tab-image" src="~/img/img-product/@Model.Product_ID-02.png" alt="">
+                                    </div>
+                                    <div class="tab-product-detail-scent">Chi tiết @Model.Product_Name </div>
+                                    <div>
+                                        <li class="tab-product-detail-list"><span class="tab-product-detail-item-lb">Bảng hiệu:</span class="tab-product-detail-item-nd"> <span> @productSpec.Top_Note</span></li>
+                                        <li class="tab-product-detail-list"><span class="tab-product-detail-item-lb">Loại sản phẩm:</span class="tab-product-detail-item-nd"> <span> @productSpec.Middle_Note</span></li>
+                                        <li class="tab-product-detail-list"><span class="tab-product-detail-item-lb">Thiết kế:</span class="tab-product-detail-item-nd"> <span> @productSpec.Base_Note</span></li>
+                                    </div>
+                                    <hr>
+                                    <div class="tab-product-tb-header">Bảng thông số chi tiết của @Model.Product_Name</div>
+                                    <div>
+                                        <table class="table">
+                                            <thead>
+                                              <tr class="tr-header">
+                                                @*<th scope="col">STT</th>*@
+                                                <th scope="col">Thông số sản phẩm</th>
+                                                <th scope="col">Giá trị</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr class="tr-row">
+                                                @*<th scope="row">1</th>*@
+                                                <td>Hệ điều hành: </td>
+                                                <td>@productSpec.Fragrance_Group</td>
+                                              </tr>
+                                              <tr class="tr-row">
+                                                @*<th scope="row">2</th>*@
+                                                <td>Giới tính:</td>
+                                                <td>@Model.Product_Gender</td>
+                                              </tr>
+                                              <tr class="tr-row">
+                                                @*<th scope="row">3</th>*@
+                                                <td>Màn hình: </td>
+                                                <td>@productSpec.Recommended_Age</td>
+                                              </tr>
+                                              <tr class="tr-row">
+                                                @*<th scope="row">4</th>*@
+                                                <td>Pin, sạc:</td>
+                                                <td>@productSpec.Concentration</td>
+                                              </tr>
+                                              <tr class="tr-row">
+                                                @*<th scope="row">5</th>*@
+                                                <td>Dung lượng:</td>
+                                                <td>@productSpec.Longevity</td>
+                                              </tr>
+                                              <tr class="tr-row">
+                                                @*<th scope="row">6</th>*@
+                                                <td>Ram:</td>
+                                                <td>@Model.Product_Style</td>
+                                              </tr>
+                                              <tr class="tr-row">
+                                                @*<th scope="row">7</th>*@
+                                                <td>Tốc độ CPU</td>
+                                                <td>@productSpec.Sillage</td>
+                                              </tr>
+                                              <tr class="tr-row">
+                                                @*<th scope="row">8</th>*@
+                                                <td>Phân giải: </td>
+                                                <td>@productSpec.Right_Time</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane">
+                                <div class="tab-product-guid-preserve">
+                                    <div class="guid-product">
+                                        <div class="guid-product-header">Hướng dẫn sử dụng</div>
+                                        <hr>
+                                        <div class="guid-product-detail">
+                                            <li class="guid-product-detail-item-label">Mở laptop: <span class="guid-product-detail-item-nd">Tìm nút nguồn trong hướng dẫn sử dụng được gửi và ấn mở.</span></li>
+                                            <li class="guid-product-detail-item-label">Cài đặt win: <span class="guid-product-detail-item-nd">Dựa theo các hướng dẫn trên mạng để cài đặt loại win mong muốn.</span></li>
+                                            <li class="guid-product-detail-item-label">Lưu ý mỗi loại laptop: <span class="guid-product-detail-item-nd">: Tùy thuộc vào từng loại laptop nên bổ sung thêm đế tản nhiệt để máy hoạt động tốt hơn.</span></li>
+                                            <li class="guid-product-detail-item-label">Lưu ý về pin: <span class="guid-product-detail-item-nd">: Nên tìm hiểu kĩ về loại laptop mình đang dùng xem nên sạc như thế nào cho phù hợp, tránh chai pin.</span></li>
+                                            <li class="guid-product-detail-item-label">Không dùng quá nhiều</li>
+                                        </div>
+                                    </div>
+
+                                    <div class="preserve-product">
+                                        <div class="preserve-product-header">Hướng dẫn bảo quản</div>
+                                        <hr>
+                                        <div class="preserve-product-detail">
+                                            <li class="preserve-product-lable"> Nhiệt độ:  <span class="preserve-product-nd">Không để máy ở gần những nơi quá nóng.</span></li>
+                                            <li class="preserve-product-lable"> Lưu ý: <span class="preserve-product-nd">Tránh cho nước hoặc các thực phẩm nhỏ vào máy.</span></li>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                           
+                            <div class="tab-pane">
+                                <div class="tab-reviews">
+                                    <form method="post" action="#" class="form-review">
+                                     <input type="hidden" value="@Model.Product_ID" class="Product_ID_Hiden" name="Proudct_ID" />
+                                        
+                                        <div class="review-rating">1. Hãy đánh giá cho sản phẩm này:</div>
+                                        <div class="rating">
+                                            <div class="star selected" data-value="1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                  <path fill="none" d="M0 0h24v24H0z"/>
+                                                  <path d="M12 16.53L18.18 20l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 20z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="star selected" data-value="2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                  <path fill="none" d="M0 0h24v24H0z"/>
+                                                  <path d="M12 16.53L18.18 20l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 20z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="star selected" data-value="3">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                  <path fill="none" d="M0 0h24v24H0z"/>
+                                                  <path d="M12 16.53L18.18 20l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 20z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="star selected" data-value="4">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                  <path fill="none" d="M0 0h24v24H0z"/>
+                                                  <path d="M12 16.53L18.18 20l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 20z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="star selected" data-value="5">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                  <path fill="none" d="M0 0h24v24H0z"/>
+                                                  <path d="M12 16.53L18.18 20l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 20z"/>
+                                                </svg>
+                                            </div>  
+                                        </div>
+                                        <input type="hidden" id="rating" name="rating" value="5" />
+                                        <input type="hidden" id="Product_ID" name="Product_ID" value="" />
+                                        <div class="mb-3">
+                                            <div class="write-review">2. Viết nhận xét của bạn vào bên dưới:</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <textarea class="form-control" id="txt-review" rows="3" placeholder="Hãy cho chúng tôi biết đánh giá của bạn về sản phẩm này !"></textarea>
+                                        </div>
+                                        <div class="infor-personal">3. Thông tin cá nhân của bạn</div>
+                                        <div class="mb-3 form-personal-infor">
+                                            <input type="text" name="input-fullname" id="input-fullname" placeholder="Họ và tên">
+                                            <div class="row">
+                                                <div class="col-lg-6  col-md-6 col-sm-6 col-12">
+                                                    <input type="tel" name="input-telephone" id="input-telephone" placeholder="Số điện thoại">
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                                    <input type="email" class="form-control" id="input-email" placeholder="abc@gmail.com">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-submit">
+                                            <input type="submit" value="Gửi đánh giá" class="input-submit-review">
+                                        </div>
+                                    </form>
+
+                                    <hr>
+                                    <div class="form-review-answer">
+                                        <div class="review-answer-personal">
+                                            <div class="personal-logo">
+                                                <img src="./img/logo-user.png" alt="" class="logo-image">
+                                            </div>
+                                            <div class="infor-user">
+                                                <div class="rating">
+                                                    <div class="star-answer" data-value="1">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                            <path fill="none" d="M0 0h24v24H0z"/>
+                                                            <path d="M12 16.53L18.18 20l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 20z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="star-answer" data-value="2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                            <path fill="none" d="M0 0h24v24H0z"/>
+                                                            <path d="M12 16.53L18.18 20l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 20z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="star-answer" data-value="3">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                            <path fill="none" d="M0 0h24v24H0z"/>
+                                                            <path d="M12 16.53L18.18 20l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 20z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="star-answer" data-value="4">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                            <path fill="none" d="M0 0h24v24H0z"/>
+                                                            <path d="M12 16.53L18.18 20l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 20z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="star-answer" data-value="5">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                            <path fill="none" d="M0 0h24v24H0z"/>
+                                                            <path d="M12 16.53L18.18 20l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 20z"/>
+                                                        </svg>
+                                                    </div>  
+                                                </div>
+                                                <input type="hidden" id="rating-answer" name="rating-answer" value="4" />
+                                                <div class="infor-username">Trọng Danh <span class="infor-user-datetime">09:44, 14/04/2023</span></div>
+                                                <div class="infor-user-review">
+                                                    Khá tốt!
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="review-answer-personal">
+                                            <div class="personal-logo">
+                                                <img src="./img/logo-user.png" alt="" class="logo-image">
+                                            </div>
+                                            <div class="infor-user">
+                                                <div class="rating">
+                                                    <div class="star-answer" data-value="1">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                            <path fill="none" d="M0 0h24v24H0z"/>
+                                                            <path d="M12 16.53L18.18 20l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 20z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="star-answer" data-value="2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                            <path fill="none" d="M0 0h24v24H0z"/>
+                                                            <path d="M12 16.53L18.18 20l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 20z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="star-answer" data-value="3">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                            <path fill="none" d="M0 0h24v24H0z"/>
+                                                            <path d="M12 16.53L18.18 20l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 20z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="star-answer" data-value="4">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                            <path fill="none" d="M0 0h24v24H0z"/>
+                                                            <path d="M12 16.53L18.18 20l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 20z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="star-answer" data-value="5">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                            <path fill="none" d="M0 0h24v24H0z"/>
+                                                            <path d="M12 16.53L18.18 20l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 20z"/>
+                                                        </svg>
+                                                    </div>  
+                                                </div>
+                                                <input type="hidden" id="rating-answer" name="rating-answer" value="4" />
+                                                <div class="infor-username">Danh Huỳnh <span class="infor-user-datetime">010:44, 14/04/2023</span></div>
+                                                <div class="infor-user-review">
+                                                   Không còn gì để nói. Tuyệt!
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="review-answer-personal">
+                                            <div class="personal-logo">
+                                                <img src="./img/logo-user.png" alt="" class="logo-image">
+                                            </div>
+                                            <div class="infor-user">
+                                                <div class="rating">
+                                                    <div class="star-answer" data-value="1">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                            <path fill="none" d="M0 0h24v24H0z"/>
+                                                            <path d="M12 16.53L18.18 20l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 20z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="star-answer" data-value="2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                            <path fill="none" d="M0 0h24v24H0z"/>
+                                                            <path d="M12 16.53L18.18 20l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 20z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="star-answer" data-value="3">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                            <path fill="none" d="M0 0h24v24H0z"/>
+                                                            <path d="M12 16.53L18.18 20l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 20z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="star-answer" data-value="4">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                            <path fill="none" d="M0 0h24v24H0z"/>
+                                                            <path d="M12 16.53L18.18 20l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 20z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="star-answer" data-value="5">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                            <path fill="none" d="M0 0h24v24H0z"/>
+                                                            <path d="M12 16.53L18.18 20l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 20z"/>
+                                                        </svg>
+                                                    </div>  
+                                                </div>
+                                                <input type="hidden" id="rating-answer" name="rating-answer" value="4" />
+                                                <div class="infor-username">Danh Trọng <span class="infor-user-datetime">013:44, 14/04/2023</span></div>
+                                                <div class="infor-user-review">
+                                                    Xịn mịn, chơi game và làm việc, học tập bao mượt. Phù hợp cho cả trẻ em, phụ nữ không hút thuốc và đàn ông đang cho con bú.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section-product-related container">
+            <div class="product-related-header">
+                Danh sách các sản phẩm liên quan
+            </div>
+            <div class="row">
+                <div class="col-lg-11">
+                    <hr style="margin-bottom: 20px; height: 2px; font-weight: 700; color: black;">
+                </div>
+            </div>
+            <div class="product-related-list">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <div class="row">
+                            @foreach (var item in ViewBag.ProductRelated)
+                            {
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-6 product-trending">
+                                    <div class="card">
+                                        <img src="~/img/img-product/@item.ProductID-01.jpg" class="card-img-top" alt="Sản phẩm 01">
+                                        <div class="card-body">
+                                          <h1 class="card-title-brand">@item.CategoryName</h1>
+                                          <h3 class="card-title-productName">@item.ProductName</h3>
+                                          <span class="card-product-price">@item.ProductPrice.ToString("C0").Replace(",", ".").Substring(1) <span>₫</span></span>
+                                          <h4 class="card-product-gender">Nước hoa cho @item.ProductGender</h4>
+                                          <a asp-controller="Product" asp-action="Detail" asp-route-id="@item.ProductID" class="btn btn-outline-success card-view-detail">Xem chi tiết</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>

@@ -1,0 +1,231 @@
+﻿.slider-container {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+    .slider-container img {
+        width: 100%;
+        height: 80vh;
+    }
+
+.mySlide {
+    width: 100%;
+    position: relative;
+}
+
+
+.fade-c {
+    -webkit-animation-name: fade-c;
+    -webkit-animation-duration: 2s;
+    animation-name: fade-c;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes fade-c {
+    from {
+        opacity: 0.8;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-c {
+    from {
+        opacity: 0.8;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 420px) {
+    .mySlide img {
+        height: 35vh;
+    }
+}
+
+.brand {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+img.acer {
+    width: 100%;
+}
+
+.col.image-brand.acer {
+    margin-top: 30px;
+}
+
+.col.image-brand.samsung {
+    margin-top: 41px;
+}
+
+img.samsung {
+    width: 100%;
+}
+
+.col-xxl.col-xl.col-lg.col.image-brand.asus {
+    margin-top: 10px;
+}
+
+
+img.asus {
+    width: 100%;
+}
+
+.col.image-brand.dell {
+    margin-top: 10px;
+}
+
+img.dell {
+    width: 100%;
+}
+
+.col.image-brand.iphone {
+    margin-top: 45px;
+}
+
+img.iphone {
+    width: 100%;
+}
+
+.banner {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+img.img-cart-list {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+}
+
+.content-cardImage {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+.content-cardImage .des p {
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.card-product {
+    margin: 0px 0px 50px;
+}
+
+.LPAShop-category {
+    border-radius: 3px;
+    padding: 0px;
+}
+
+.LPAShop-category-block {
+    margin: 0 10px;
+    border: 1px solid #c3bcbc;
+    border-radius: 3px;
+}
+
+.intro-product-trending {
+    text-align: center;
+}
+
+.intro-content-des {
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.intro-view-all {
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 35px 0px;
+}
+
+a.btn.btn-outline-dark.btn-view-all {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.btn-view-all {
+    border-radius: 40px;
+    padding: 5px 25px;
+}
+
+.card {
+    height: 450px;
+}
+
+img.card-img-top {
+    height: 250px;
+}
+
+h1.card-title-brand {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+}
+
+h3.card-title-productName {
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+    margin-bottom: 5px;
+}
+
+span.card-product-price {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    display: block;
+    margin-bottom: 1px;
+}
+
+h4.card-product-gender {
+    font-size: 11px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+a.btn.btn-outline-success.card-view-detail {
+    font-size: 14px;
+    padding: 5px 15px;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+.intro-product-recommend {
+    text-align: center;
+}
+
+img.left-image {
+    width: 100%;
+}
+
+img.right-image {
+    width: 100%;
+}
+
+a:hover {
+    color: gray;
+}
+
+.col-xxl.col-lg.col-6.product-trending {
+    width: 20%;
+}

@@ -1,0 +1,218 @@
+﻿
+@{
+    ViewData["Title"] = $"Trang chủ";
+    ViewData["UserID"] = ViewBag.UserID;
+    ViewData["UserName"] = ViewBag.UserName;
+    ViewData["CountCart"] = ViewBag.CountCart;
+}
+
+<div class="slider-container">
+    <div class="mySlide fade-c">
+        <img src="~/img/img-home/slide10.jpg" alt="" />
+    </div>
+
+    <div class="mySlide fade-c">
+        <img src="~/img/img-home/slide06.jpg" alt="" />
+    </div>
+
+    <div class="mySlide fade-c">
+        <img src="~/img/img-home/slide11.jpg" alt="" />
+    </div>
+
+    <div class="mySlide fade-c">
+        <img src="~/img/img-home/slide08.jpg" alt="" />
+    </div>
+
+    <div class="mySlide fade-c">
+        <img src="~/img/img-home/slide06.png" alt="" />
+    </div>
+
+    <div class="mySlide fade-c">
+        <img src="~/img/img-home/slide07.jpg" alt="" />
+    </div>
+</div>
+
+<div class="brand">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl col-xl col-lg col image-brand asus">
+                <a asp-controller="Product" asp-action="ViewProductByBrand" asp-route-brandID="PF002">
+                    <img src="~/img/img-home/acer.png" alt="" class="acer">
+                </a>
+            </div>
+            <div class="col-xxl col-xl col-lg col image-brand acer">
+                <a asp-controller="Product" asp-action="ViewProductByBrand" asp-route-brandID="PF005">
+                    <img src="~/img/img-home/iphone.png" alt="" class="iphone">
+                </a>
+            </div>
+            <div class="col-xxl col-xl col-lg col image-brand dell">
+                <a asp-controller="Product" asp-action="ViewProductByBrand" asp-route-brandID="PF001">
+                    <img src="~/img/img-home/asus.jpg" alt="" class="asus">
+                </a>
+            </div>
+            <div class="col-xxl col-xl col-lg col image-brand iphone">
+                <a asp-controller="Product" asp-action="ViewProductByBrand" asp-route-brandID="PF004">
+                    <img src="~/img/img-home/samsung.png" alt="" class="samsung">
+                </a>
+            </div>
+            <div class="col-xxl col-xl col-lg col image-brand samsung">
+                <a asp-controller="Product" asp-action="ViewProductByBrand" asp-route-brandID="PF003">
+                    <img src="~/img/img-home/dell.png" alt="" class="dell">
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="card-product">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-6 LPAShop-category">
+                <div class="LPAShop-category-block">
+                    <a asp-controller="Product" asp-action="ViewProductByGender" asp-route-gender="Nam" class="content-cardImage">
+                        <div class="img">
+                            <img src="~/img/img-home/laptop.jpg" alt="" class="img-cart-list">
+                        </div>
+                        <div class="des">
+                            <p>Thiết bị cho nam</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-6 LPAShop-category">
+                <div class="LPAShop-category-block">
+                    <a asp-controller="Product" asp-action="ViewProductByGender" asp-route-gender="Nữ" class="content-cardImage">
+                        <div class="img">
+                            <img src="~/img/img-home/samsung.jpg" alt="" class="img-cart-list">
+                        </div>
+                        <div class="des">
+                            <p>Thiết bị cho nữ</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-6 LPAShop-category">
+                <div class="LPAShop-category-block">
+                    <a asp-controller="Product" asp-action="ViewProductByGender" asp-route-gender="Unisex" class="content-cardImage">
+                        <div class="img">
+                            <img src="~/img/img-home/iphone01.jpg" alt="" class="img-cart-list">
+                        </div>
+                        <div class="des">
+                            <p>Thiết bị phù hợp cả 2</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-6 LPAShop-category">
+                <div class="LPAShop-category-block">
+                    <a asp-controller="Product" asp-action="ViewProductStyle" asp-route-style="new" class="content-cardImage">
+                        <div class="card-img">
+                            <img src="~/img/img-home/new.jpg" alt="" class="img-cart-list">
+                        </div>
+                        <div class="des">
+                            <p>Thiết bị mới</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="list-product-trending" style="margin-top: 50px;">
+    <div class="container">
+        <div class="intro-product-trending">
+            <div class="intro-content">
+                <h1 class="intro-content-des">Thiết bị xu hướng</h1>
+            </div>
+        </div>
+        <hr>
+        <div class="row" style="margin-top: 40px;">
+            @foreach (var item in ViewBag.listTrending)
+            {
+                <div class="col-xxl col-lg col-6 product-trending">
+                    <div class="card">
+                        <img src="~/img/img-product/@item.ProductID-01.jpg" class="card-img-top" alt="Sản phẩm 01">
+                        <div class="card-body">
+                            <h1 class="card-title-brand">@item.CategoryName</h1>
+                            <h3 class="card-title-productName">@item.ProductName</h3>
+                            <span class="card-product-price">@item.ProductPrice.ToString("C0").Replace(",", ".").Substring(1)<span> ₫</span></span>
+                            <h4 class="card-product-gender">Laptop cho @item.ProductGender.ToLower()</h4>
+                            <a asp-controller="Product" asp-action="Detail" asp-route-id="@item.ProductID" class="btn btn-outline-success card-view-detail">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <div class="intro-view-all">
+                <a class="btn btn-outline-dark btn-view-all" asp-controller="Product" asp-action="ViewProductStyle" asp-route-style="trending">
+                    Xem tất cả
+            </a>
+            </div>
+            
+        </div>
+       
+    </div>
+</div>
+
+
+
+<div class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxlcol-6 col-xl-6 col-lg-6 col-12 leftbanner">
+                <img src="~/img/img-home/banner01.jpg" alt="" class="left-image">
+            </div>
+            <div class="col-xxlcol-6 col-xl-6 col-lg-6 col-12 rightbanner">
+                <img src="~/img/img-home/banner02.jpg" alt="" class="right-image">
+            </div>
+        </div>
+    </div>
+</div>
+
+@*Sản phẩm đề xuất*@
+
+<div class="list-product-trending" style="margin-top: 50px;">
+    <div class="container">
+        <div class="intro-product-recommend">
+            <div class="intro-content">
+                <h1 class="intro-content-des">Đề xuất cho bạn</h1>
+            </div>
+        </div>
+        <hr>
+        <div class="row" style="margin-top: 40px;">
+
+            @foreach (var item in ViewBag.listRecommend)
+            {
+                <div class="col-xxl col-lg col-6 product-trending">
+                    <div class="card">
+                        <img src="~/img/img-product/@item.ProductID-01.png" class="card-img-top" alt="Sản phẩm 01">
+                        <div class="card-body">
+                            <h1 class="card-title-brand">@item.CategoryName</h1>
+                            <h3 class="card-title-productName">@item.ProductName</h3>
+                            <span class="card-product-price">@item.ProductPrice.ToString("C0").Replace(",", ".").Substring(1)<span> ₫</span></span>
+                            <h4 class="card-product-gender">Thiết bị cho @item.ProductGender.ToLower()</h4>
+                            <a asp-controller="Product" asp-action="Detail" asp-route-id="@item.ProductID" class="btn btn-outline-success card-view-detail">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <div class="intro-view-all">
+                <a class="btn btn-outline-dark btn-view-all" asp-controller="Product" asp-action="ViewProductStyle" asp-route-style="rcm">
+                    Xem tất cả
+            </a>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+

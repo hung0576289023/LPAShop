@@ -1,0 +1,90 @@
+﻿@model User
+
+@{
+    ViewData["Title"] = "Trang đăng ký";
+}
+
+<div class="stuff" style="margin: 20px 0px 100px;">
+    <div class="content-header container">
+        <nav aria-label="breadcrumb" class="breadcrumb-des">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#" class="breadcrumb-item-title">Trang chủ</a></li>
+                <li class="breadcrumb-item active breadcrumb-item-des" aria-current="page">Đăng ký</li>
+            </ol>
+            <hr>
+        </nav>
+    </div>
+
+    <div class="content-nd container">
+        <div class="row">
+            <div class="login-content col-xxl-6 col-xl-6 col-lg-6">
+                <div class="login-header">
+                    <img src="~/img/img-header-footer/logo.png" alt="">
+                </div>
+                <div class="login-title">Hãy đăng ký tài khoản để có một trải nghiệm tốt nhất !</div>
+                <form method="post">
+
+                    @if (Model != null)
+                    {
+                        <div class="mb-3">
+                            <label for="User_Name" class="form-label lb-email">Tên người dùng</label>
+                            <input type="text" class="form-control" id="User_Name" name="User_Name" value="@Model.User_Name">
+                            @Html.ValidationMessageFor(model => model.User_Name, "", new { @class = "text-danger", style = "font-size: 15px;"  })
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="User_Email" class="form-label lb-email">Email</label>
+                            <input type="email" class="form-control" id="User_Email" name="User_Email" value="@Model.User_Email">
+                            @Html.ValidationMessageFor(model => model.User_Email, "", new { @class = "text-danger", style = "font-size: 15px;"  })
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="User_Password" class="form-label lb-password">Mật khẩu</label>
+                            <input type="password" class="form-control" id="User_Password" name="User_Password" value="@Model.User_Password">
+                            @Html.ValidationMessageFor(model => model.User_Password, "", new { @class = "text-danger", style = "font-size: 15px;"  })
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="User_ConfirmPassword" class="form-label lb-password">Nhập lại mật khẩu</label>
+                            <input type="password" class="form-control" id="User_ConfirmPassword" name="User_ConfirmPassword" value="">
+                        </div>
+
+                        @if (ViewData["ErrorUserPassword"] != null)
+                        {
+                            <div class="text-danger" style="font-size: 15px;" role="alert">
+                                @ViewData["ErrorUserPassword"]
+                            </div>
+                        }
+                    } else
+                    {
+                        <div class="mb-3">
+                            <label for="User_Name" class="form-label lb-email">Tên người dùng</label>
+                            <input type="text" class="form-control" id="User_Name" name="User_Name" value="">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="User_Email" class="form-label lb-email">Email</label>
+                            <input type="email" class="form-control" id="User_Email" name="User_Email" value="">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="User_Password" class="form-label lb-password">Mật khẩu</label>
+                            <input type="password" class="form-control" id="User_Password" name="User_Password" value="">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="User_ConfirmPassword" class="form-label lb-password">Nhập lại mật khẩu</label>
+                            <input type="password" class="form-control" id="User_ConfirmPassword" name="User_ConfirmPassword" value="">
+                        </div>
+                    }
+
+                    <input type="submit" class="btn btn-outline-dark btn-login" value="Đăng Ký">
+                    <div class="not-account">Bạn đã có tài khoản ? <a asp-action="Login" asp-controller="Account" class="not-account-register">Hãy đăng nhập !</a></div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
