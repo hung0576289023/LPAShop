@@ -173,7 +173,7 @@
                                     <h1 class="card-title-brand">@item.Category.Category_Name</h1>
                                     <h3 class="card-title-productName">@item.Product_Name</h3>
                                     <span class="card-product-price">@item.Product_Price.ToString("C0").Replace(",", ".").Substring(1)<span> ₫</span></span>
-                                    <h4 class="card-product-gender">Nước hoa cho @item.Product_Gender.ToLower()</h4>
+                                    <h4 class="card-product-gender">Thiết bị cho @item.Product_Gender.ToLower()</h4>
                                     <a asp-controller="Product" asp-action="Detail" asp-route-id="@item.Product_ID" class="btn btn-outline-success card-view-detail">Xem chi tiết</a>
                                 </div>
                             </div>

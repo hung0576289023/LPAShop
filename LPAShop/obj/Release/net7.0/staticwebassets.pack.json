@@ -1,0 +1,621 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\obj\\Release\\net7.0\\scopedcss\\projectbundle\\LPAShop.bundle.scp.css",
+      "PackagePath": "staticwebassets\\LPAShop.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\css\\admin.css",
+      "PackagePath": "staticwebassets\\css\\admin.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\css\\detail.css",
+      "PackagePath": "staticwebassets\\css\\detail.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\css\\layout.css",
+      "PackagePath": "staticwebassets\\css\\layout.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\css\\product.css",
+      "PackagePath": "staticwebassets\\css\\product.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\css\\responsive_layout.css",
+      "PackagePath": "staticwebassets\\css\\responsive_layout.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-header-footer\\R.jpg",
+      "PackagePath": "staticwebassets\\img\\img-header-footer\\R.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-header-footer\\R.png",
+      "PackagePath": "staticwebassets\\img\\img-header-footer\\R.png"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-header-footer\\facebook.png",
+      "PackagePath": "staticwebassets\\img\\img-header-footer\\facebook.png"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-header-footer\\google-maps.png",
+      "PackagePath": "staticwebassets\\img\\img-header-footer\\google-maps.png"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-header-footer\\instagram.png",
+      "PackagePath": "staticwebassets\\img\\img-header-footer\\instagram.png"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-header-footer\\logo-user.png",
+      "PackagePath": "staticwebassets\\img\\img-header-footer\\logo-user.png"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-header-footer\\logo.jpg",
+      "PackagePath": "staticwebassets\\img\\img-header-footer\\logo.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-header-footer\\phuongthucthanhtoan.png",
+      "PackagePath": "staticwebassets\\img\\img-header-footer\\phuongthucthanhtoan.png"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-header-footer\\product01.png",
+      "PackagePath": "staticwebassets\\img\\img-header-footer\\product01.png"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-header-footer\\youtube.png",
+      "PackagePath": "staticwebassets\\img\\img-header-footer\\youtube.png"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-home\\acer.png",
+      "PackagePath": "staticwebassets\\img\\img-home\\acer.png"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-home\\android.jpg",
+      "PackagePath": "staticwebassets\\img\\img-home\\android.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-home\\asus.jpg",
+      "PackagePath": "staticwebassets\\img\\img-home\\asus.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-home\\banner01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-home\\banner01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-home\\banner02.png",
+      "PackagePath": "staticwebassets\\img\\img-home\\banner02.png"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-home\\dell.png",
+      "PackagePath": "staticwebassets\\img\\img-home\\dell.png"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-home\\iphone.png",
+      "PackagePath": "staticwebassets\\img\\img-home\\iphone.png"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-home\\iphone01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-home\\iphone01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-home\\laptop.jpg",
+      "PackagePath": "staticwebassets\\img\\img-home\\laptop.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-home\\new.jpg",
+      "PackagePath": "staticwebassets\\img\\img-home\\new.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-home\\product01.png",
+      "PackagePath": "staticwebassets\\img\\img-home\\product01.png"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-home\\samsung.jpg",
+      "PackagePath": "staticwebassets\\img\\img-home\\samsung.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-home\\samsung.png",
+      "PackagePath": "staticwebassets\\img\\img-home\\samsung.png"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-home\\slide06.jpg",
+      "PackagePath": "staticwebassets\\img\\img-home\\slide06.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-home\\slide07.jpg",
+      "PackagePath": "staticwebassets\\img\\img-home\\slide07.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-home\\slide08.jpg",
+      "PackagePath": "staticwebassets\\img\\img-home\\slide08.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-home\\slide10.png",
+      "PackagePath": "staticwebassets\\img\\img-home\\slide10.png"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-home\\slide11.jpg",
+      "PackagePath": "staticwebassets\\img\\img-home\\slide11.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P1001-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P1001-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P1001-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P1001-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P1002-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P1002-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P1002-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P1002-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P1003-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P1003-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P1003-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P1003-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P1004-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P1004-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P1004-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P1004-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P1005-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P1005-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P1005-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P1005-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P2001-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P2001-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P2001-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P2001-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P2002-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P2002-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P2002-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P2002-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P2003-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P2003-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P2003-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P2003-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P2004-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P2004-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P2004-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P2004-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P2005-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P2005-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P2005-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P2005-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P3001-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P3001-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P3001-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P3001-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P3002-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P3002-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P3002-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P3002-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P3003-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P3003-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P3003-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P3003-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P3004-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P3004-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P3004-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P3004-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P3005-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P3005-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P3005-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P3005-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P4001-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P4001-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P4001-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P4001-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P4002-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P4002-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P4002-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P4002-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P4003-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P4003-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P4003-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P4003-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P4004-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P4004-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P4004-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P4004-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P4005-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P4005-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P4005-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P4005-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P5001-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P5001-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P5001-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P5001-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P5002-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P5002-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P5002-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P5002-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P5003-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P5003-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P5003-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P5003-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P5004-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P5004-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P5004-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P5004-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P5005-01.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P5005-01.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\P5005-02.jpg",
+      "PackagePath": "staticwebassets\\img\\img-product\\P5005-02.jpg"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-product\\product01.png",
+      "PackagePath": "staticwebassets\\img\\img-product\\product01.png"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\js\\detail.js",
+      "PackagePath": "staticwebassets\\js\\detail.js"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\js\\layout.js",
+      "PackagePath": "staticwebassets\\js\\layout.js"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\js\\product.js",
+      "PackagePath": "staticwebassets\\js\\product.js"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.LPAShop.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.build.LPAShop.props",
+      "PackagePath": "build\\LPAShop.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.LPAShop.props",
+      "PackagePath": "buildMultiTargeting\\LPAShop.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.buildTransitive.LPAShop.props",
+      "PackagePath": "buildTransitive\\LPAShop.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

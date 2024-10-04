@@ -245,9 +245,10 @@ D:\C#\LPAShop\LPAShop\obj\Debug\net7.0\staticwebassets.development.json
 D:\C#\LPAShop\LPAShop\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\C#\LPAShop\LPAShop\obj\Debug\net7.0\scopedcss\bundle\LPAShop.styles.css
 D:\C#\LPAShop\LPAShop\obj\Debug\net7.0\scopedcss\projectbundle\LPAShop.bundle.scp.css
-D:\C#\LPAShop\LPAShop\obj\Debug\net7.0\LPAShop.csproj.CopyComplete
 D:\C#\LPAShop\LPAShop\obj\Debug\net7.0\LPAShop.dll
 D:\C#\LPAShop\LPAShop\obj\Debug\net7.0\refint\LPAShop.dll
 D:\C#\LPAShop\LPAShop\obj\Debug\net7.0\LPAShop.pdb
 D:\C#\LPAShop\LPAShop\obj\Debug\net7.0\LPAShop.genruntimeconfig.cache
 D:\C#\LPAShop\LPAShop\obj\Debug\net7.0\ref\LPAShop.dll
+D:\C#\LPAShop\LPAShop\obj\Debug\net7.0\LPAShop.sourcelink.json
+D:\C#\LPAShop\LPAShop\obj\Debug\net7.0\LPAShop.csproj.Up2Date

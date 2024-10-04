@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\LPAShop",
+    "\\LPAShop\\wwwroot",
+    "\\LPAShop\\wwwroot\\img"
   ],
   "SelectedNode": "\\LPAShop.sln",
   "PreviewInSolutionExplorer": false

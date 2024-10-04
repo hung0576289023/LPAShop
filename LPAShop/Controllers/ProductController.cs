@@ -78,7 +78,7 @@ namespace LPAShop.NET06.Controllers
         }
 
         [HttpGet]
-        [Route("Danh-sach-nuoc-hoa-theo-thuong-hieu/{brandID?}")]
+        [Route("Danh-sach-dien-thoai-theo-thuong-hieu/{brandID?}")]
         public IActionResult ViewProductByBrand(string brandID, string? priceSortOrder, List<string>? gender, List<string>? capacity, List<string>? original, int page = 1, int pageSize = 8)
         {
             var userid = HttpContext.Session.GetInt32("UserId");
@@ -140,7 +140,7 @@ namespace LPAShop.NET06.Controllers
         }
 
         [HttpGet]
-        [Route("Danh-sach-nuoc-hoa-theo-gioi-tinh/{gender?}")]
+        [Route("Danh-sach-dien-thoai-theo-gioi-tinh/{gender?}")]
         public IActionResult ViewProductByGender(string gender, string? priceSortOrder, List<string>? brand, List<string>? capacity, List<string>? original, int page = 1, int pageSize = 8)
         {
             var userid = HttpContext.Session.GetInt32("UserId");
