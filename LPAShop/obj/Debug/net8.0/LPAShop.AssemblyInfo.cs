@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LPAShop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f8d658d6361236995cce243effd2cf3048ea88e7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+093d81a89ebd4997b0f8cfed1a6f600379f4d3a0")]
 [assembly: System.Reflection.AssemblyProductAttribute("LPAShop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LPAShop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

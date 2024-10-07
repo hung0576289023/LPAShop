@@ -9,6 +9,18 @@ namespace LPAShop.NET06.Data
         {
 
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Order>(entity =>
+            {
+                entity.HasKey(e => e.Order_ID); // Đặt Order_ID làm khóa chính
+            });
+            modelBuilder.Entity<OrderItems>(entity =>
+            {
+                entity.HasKey(e => e.OrderItem_ID); // Đặt OrderItem_ID làm khóa chính
+            });
+        }
+
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
@@ -17,5 +29,7 @@ namespace LPAShop.NET06.Data
         public DbSet<CartItem> CartItems { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<ReviewProduct> ReviewProducts { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItems> OrderItems { get; set; }
     }
 }

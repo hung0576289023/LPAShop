@@ -295,6 +295,86 @@ namespace LPAShop.NET06.Migrations
 
                     b.ToTable("Users");
                 });
+            modelBuilder.Entity("LPAShop.NET06.Models.Order", b =>
+            {
+                b.Property<int>("Order_ID")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
+
+                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Order_ID"));
+
+                b.Property<int>("User_ID")
+                    .HasColumnType("int");
+
+                b.Property<string>("FullName")
+                    .IsRequired()
+                    .HasMaxLength(100)
+                    .HasColumnType("nvarchar(100)");
+
+                b.Property<string>("PhoneNumber")
+                    .IsRequired()
+                    .HasMaxLength(15)
+                    .HasColumnType("nvarchar(15)");
+
+                b.Property<string>("Address")
+                    .IsRequired()
+                    .HasMaxLength(200)
+                    .HasColumnType("nvarchar(200)");
+
+                b.Property<string>("PaymentMethod")
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .HasColumnType("nvarchar(50)");
+
+                b.Property<DateTime>("OrderDate")
+                    .HasColumnType("datetime2");
+
+                b.Property<decimal>("TotalPrice")
+                    .HasColumnType("decimal(18,2)");
+
+                b.HasKey("Order_ID");
+
+                b.ToTable("Orders");
+            });
+            // Thêm mô hình OrderItem
+            modelBuilder.Entity("LPAShop.NET06.Models.OrderItem", b =>
+            {
+                b.Property<int>("OrderItem_ID")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
+
+                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderItem_ID"));
+
+                b.Property<int>("Order_ID")
+                    .HasColumnType("int");
+
+                b.Property<string>("Product_ID")
+                    .IsRequired()
+                    .HasMaxLength(5)
+                    .HasColumnType("nvarchar(5)");
+
+                b.Property<int>("Quantity")
+                    .HasColumnType("int");
+
+                b.Property<decimal>("Price")
+                    .HasColumnType("decimal(18,2)");
+
+                b.HasKey("OrderItem_ID");
+
+                b.HasIndex("Order_ID");
+
+                b.ToTable("OrderItems");
+            });
+            modelBuilder.Entity("LPAShop.NET06.Models.OrderItem", b =>
+            {
+                b.HasOne("LPAShop.NET06.Models.Order", "Order")
+                    .WithMany("OrderItems") // Tùy thuộc vào việc bạn định nghĩa trong Order
+                    .HasForeignKey("Order_ID")
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .IsRequired();
+
+                b.Navigation("Order");
+            });
 
             modelBuilder.Entity("LPAShop.NET06.Models.Cart", b =>
                 {

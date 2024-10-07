@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "x6ameFTEvJrKWOwcDQ0LrgWpkNNFUu/h6HahegiHn4s=",
+  "Hash": "BZFD0/tol4LtuuY/HL4LBO/xI1OkNbkPeCacz5u7Q3s=",
   "Source": "LPAShop",
   "BasePath": "_content/LPAShop",
   "Mode": "Default",
@@ -585,6 +585,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\img-home\\new.png"
+    },
+    {
+      "Identity": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-home\\nu.jpg",
+      "SourceId": "LPAShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\",
+      "BasePath": "_content/LPAShop",
+      "RelativePath": "img/img-home/nu.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\img-home\\nu.jpg"
     },
     {
       "Identity": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-home\\oppo.png",

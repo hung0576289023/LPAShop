@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Đặt hàng thành công";
+}
+public IActionResult OrderSuccess()
+{
+    return View();
+}
+
+<div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Đặt hàng thành công!</h4>
+    <p>Cảm ơn bạn đã mua hàng tại cửa hàng của chúng tôi. Đơn hàng của bạn đã được xác nhận và đang được xử lý.</p>
+    <hr>
+    <p class="mb-0">Bạn có thể theo dõi đơn hàng trong <a href="@Url.Action("Orders", "Account")">Đơn hàng của tôi</a>.</p>
+</div>

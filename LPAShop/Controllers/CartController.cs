@@ -107,7 +107,8 @@ namespace LPAShop.NET06.Controllers
             {
                 TempData["LoginToViewCart"] = "Hãy đăng nhập vào tài khoản để xem giỏ hàng của bạn";
                 return RedirectToAction("Login", "Account");
-            } else
+            } 
+            else
             {
                 getUserIDAndUserName((int)userId);
                 getCountCartItem((int)userId);
@@ -128,8 +129,93 @@ namespace LPAShop.NET06.Controllers
             ViewBag.TotalPages = (int)Math.Ceiling(cart.CartItems.Count() / (double)pageSize);
 
             //return View(cart.CartItems.ToList());
+            // Tính tổng tiền
+            decimal totalPrice = cart.CartItems.Sum(item => item.Quantity * item.Product_Price);
+
+            // Lưu tổng tiền vào ViewBag để sử dụng trong view
+            ViewBag.TotalPrice = totalPrice;
+
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = (int)Math.Ceiling(cart.CartItems.Count() / (double)pageSize);
             return View(listCartItems);
         }
+        [HttpPost]
+        [Route("gio-hang/thanh-toan")]
+        public IActionResult Checkout()
+        {
+            var userId = HttpContext.Session.GetInt32("UserId");
+
+            if (userId == null)
+            {
+                TempData["LoginToCheckout"] = "Hãy đăng nhập vào tài khoản để tiếp tục thanh toán.";
+                return RedirectToAction("Login", "Account");
+            }
+
+            // Lấy thông tin giỏ hàng của người dùng
+            var cart = _context.Carts.Include(c => c.CartItems).FirstOrDefault(c => c.User_ID == userId);
+            if (cart == null)
+            {
+                TempData["CartEmpty"] = "Giỏ hàng của bạn đang trống.";
+                return RedirectToAction("ViewCart");
+            }
+
+            var checkoutViewModel = new CheckoutViewModel
+            {
+                FullName = "",  // Người dùng sẽ điền thông tin này
+                PhoneNumber = "",
+                Address = "",
+                CartItems = cart.CartItems.ToList(),
+                TotalPrice = cart.CartItems.Sum(item => item.Quantity * item.Product_Price)
+            };
+
+            return View(checkoutViewModel);
+        }
+        [HttpPost]
+        [Route("gio-hang/xac-nhan-thanh-toan")]
+        public IActionResult ConfirmOrder(CheckoutViewModel model)
+        {
+            var userId = HttpContext.Session.GetInt32("UserId");
+
+            if (userId == null)
+            {
+                TempData["LoginToCheckout"] = "Hãy đăng nhập vào tài khoản để tiếp tục thanh toán.";
+                return RedirectToAction("Login", "Account");
+            }
+
+            if (ModelState.IsValid)
+            {
+                // Tạo mới đơn hàng
+                var order = new Order
+                {
+                    User_ID = userId.Value,
+                    FullName = model.FullName,
+                    PhoneNumber = model.PhoneNumber,
+                    Address = model.Address,
+                    PaymentMethod = model.PaymentMethod,
+                    OrderDate = DateTime.Now,
+                    TotalPrice = model.TotalPrice,
+                    OrderItems = model.CartItems.Select(item => new OrderItems
+                    {
+                        Product_ID = item.Product_ID,
+                        Quantity = item.Quantity,
+                        Price = item.Product_Price
+                    }).ToList()
+                };
+
+                _context.Orders.Add(order);
+                _context.SaveChanges();
+
+                // Xóa giỏ hàng sau khi đặt hàng thành công
+                var cart = _context.Carts.Include(c => c.CartItems).FirstOrDefault(c => c.User_ID == userId);
+                _context.CartItems.RemoveRange(cart.CartItems);
+                _context.SaveChanges();
+
+                return RedirectToAction("OrderSuccess");
+            }
+
+            return View("Checkout", model);
+        }
+
 
         [HttpPost]
         [Route("xoa-san-pham")]

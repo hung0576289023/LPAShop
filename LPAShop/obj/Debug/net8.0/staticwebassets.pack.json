@@ -117,6 +117,10 @@
       "PackagePath": "staticwebassets\\img\\img-home\\new.png"
     },
     {
+      "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-home\\nu.jpg",
+      "PackagePath": "staticwebassets\\img\\img-home\\nu.jpg"
+    },
+    {
       "Id": "D:\\C#\\LPAShop\\LPAShop\\wwwroot\\img\\img-home\\oppo.png",
       "PackagePath": "staticwebassets\\img\\img-home\\oppo.png"
     },

@@ -5,7 +5,7 @@
     ViewData["UserID"] = ViewBag.UserID;
     ViewData["UserName"] = ViewBag.UserName;
     ViewData["CountCart"] = ViewBag.CountCart;
-    var TotalPriceAll = 0;
+    var TotalPriceAll = Model.Sum(item => item.Quantity * item.Product_Price); // Tính tổng số tiền;
     var TotalPriceAllMobie = 0;
     var i = 1;
 }
@@ -130,9 +130,16 @@
                     }
                 </tbody>
             </table>
+            <!-- Hiển thị tổng tiền -->
+            <div class="cart-summary" style="text-align: right; margin-top: 20px;">
+                <h4 style="margin-top: 20px;">Tổng số tiền: @TotalPriceAll.ToString("C0").Replace(",", ".").Substring(1) ₫</h4>
 
-            @*<div class="TotalPrice">Tổng giá trị thành tiền: @TotalPriceAll.ToString("C0").Replace(",", ".").Substring(1) ₫</div>*@
-            @*<div class="TotalPrice-mobie">Tổng giá trị thành tiền: @TotalPriceAllMobie.ToString("C0").Replace(",", ".").Substring(1) ₫</div>*@
+                <!-- Nút thanh toán -->
+                <form method="post" action="@Url.Action("Checkout", "Cart")">
+                    <button type="submit" class="btn btn-success" style="margin-top: 20px; font-size: 18px; padding: 10px 20px;">">Thanh toán</button>
+                </form>
+            </div>
+      
         } else
         {
             <div class="alert alert-danger" style="font-size: 15px;"> Giỏ hàng của bạn trống !</div>
