@@ -51,13 +51,13 @@
                     <tr>
                         <td>@item.Product_Name</td>
                         <td>@item.Quantity</td>
-                        <td>@item.Product_Price.ToString("C0").Replace(",", ".").Substring(1) ₫</td>
-                        <td>@(item.Quantity * item.Product_Price).ToString("C0").Replace(",", ".").Substring(1) ₫</td>
+                        <td>@item.Product_Price
+                        <td>@(item.Quantity * item.Product_Price)
                     </tr>
                 }
                 <tr>
                     <td colspan="3"><strong>Tổng tiền:</strong></td>
-                    <td><strong>@Model.TotalPrice.ToString("C0").Replace(",", ".").Substring(1) ₫</strong></td>
+                    <td><strong>@Model.TotalPrice.ToString("C0")
                 </tr>
             </tbody>
         </table>
