@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\C#\\LPAShop\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{195A15FF-11FE-4541-AB7D-4954C43D7439}|LPAShop\\LPAShop.csproj|d:\\c#\\lpashop\\lpashop\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{195A15FF-11FE-4541-AB7D-4954C43D7439}|LPAShop\\LPAShop.csproj|solutionrelative:lpashop\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\C#\\LPAShop\\LPAShop\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "LPAShop\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\C#\\LPAShop\\LPAShop\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "LPAShop\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAAAFgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-07T13:35:46.092Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
