@@ -67,6 +67,11 @@ var resetButtons = document.querySelectorAll('.btn-reset');
 // Lặp qua tất cả các nút resetButton và đặt sự kiện click cho từng nút
 resetButtons.forEach(function (resetButton) {
     resetButton.addEventListener('click', function () {
+        // Lấy form cha gần nhất của nút reset
+        var form = resetButton.closest('form');
+
+        // Reset toàn bộ form về trạng thái mặc định
+        form.reset();
         // Lấy tất cả các trường checkbox và radio button trong form
         var checkboxes = resetButton.closest('form').querySelectorAll('input[type="checkbox"]');
         var radios = resetButton.closest('form').querySelectorAll('input[type="radio"]');
@@ -81,5 +86,6 @@ resetButtons.forEach(function (resetButton) {
         radios.forEach(function (radio) {
             radio.defaultChecked = false;
         });
+        window.location.href = 'https://localhost:7028/danh-sach-san-pham'; 
     });
 });

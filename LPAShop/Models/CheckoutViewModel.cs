@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using LPAShop.NET06.Data;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel;
+using System.Collections.Generic;
 
 namespace LPAShop.NET06.Models
 {
@@ -16,5 +17,5 @@ namespace LPAShop.NET06.Models
         public List<CartItem> CartItems { get; set; } // Danh sách sản phẩm trong giỏ hàng
         public decimal TotalPrice { get; set; } // Tổng giá tiền
     }
-  
+
 }

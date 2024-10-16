@@ -315,13 +315,23 @@ namespace LPAShop.NET06.Controllers
             return View(product);
         }
 
+
         public string MessageStatus { get; set; }
         public string AlertMessage { get; set; }
         public string MessageStatusSearch { get; set; }
 
 
-        private List<Product> FilterAndSortProducts(List<Product> products, string? priceSortOrder, List<string>? brand, List<string>? gender, List<string>? capacity, List<string>? original)
+        private List<Product> FilterAndSortProducts(List<Product> products, string? priceSortOrder, List<string>? brand, List<string>? gender, List<string>? capacity, List<string>? original, decimal? minPrice = null, decimal? maxPrice = null)
         {
+            if (minPrice.HasValue)
+            {
+                products = products.Where(p => p.Product_Price >= minPrice.Value).ToList();
+            }
+
+            if (maxPrice.HasValue)
+            {
+                products = products.Where(p => p.Product_Price <= maxPrice.Value).ToList();
+            }
             //Sort theo giá sản phẩm
             if (priceSortOrder != null && priceSortOrder.Any())
             {
@@ -362,10 +372,27 @@ namespace LPAShop.NET06.Controllers
             return products;
         }
 
-        public string getUrlQuery(string? searchString, string? searchHistory, string? style, string? priceSortOrder, List<string>? brand, List<string>? gender, List<string>? capacity, List<string>? original)
+        public string getUrlQuery(string? searchString, string? searchHistory, string? style, string? priceSortOrder, List<string>? brand, List<string>? gender, List<string>? capacity, List<string>? original, decimal? minPrice = null, decimal? maxPrice = null)
         {
             var urlBuilder = new StringBuilder();
             urlBuilder.Append(Request.Path);
+            if (minPrice.HasValue)
+            {
+                urlBuilder.AppendFormat("?minPrice={0}", minPrice);
+            }
+
+            if (maxPrice.HasValue)
+            {
+                if (!urlBuilder.ToString().Contains("?"))
+                {
+                    urlBuilder.Append("?");
+                }
+                else
+                {
+                    urlBuilder.Append("&");
+                }
+                urlBuilder.AppendFormat("maxPrice={0}", maxPrice);
+            }
 
             if (searchString != null && searchString.Any())
             {
@@ -503,7 +530,7 @@ namespace LPAShop.NET06.Controllers
         }
 
         [Route("loc-san-pham-theo-tieu-chi/")]
-        public IActionResult Filter(string? priceSortOrder, List<string>? brand, List<string>? gender, List<string>? capacity, List<string>? original, int page = 1, int pageSize = 8)
+        public IActionResult Filter(string? priceSortOrder, List<string>? brand, List<string>? gender, List<string>? capacity, List<string>? original, decimal? minPrice = null, decimal? maxPrice = null, int page = 1, int pageSize = 8)
         {
             var userid = HttpContext.Session.GetInt32("UserId");
             if (userid != null)
@@ -516,13 +543,13 @@ namespace LPAShop.NET06.Controllers
 
             var products = _context.Products.ToList();
 
-            products = FilterAndSortProducts(products, priceSortOrder, brand, gender, capacity, original);
+            products = FilterAndSortProducts(products, priceSortOrder, brand, gender, capacity, original, minPrice, maxPrice);
 
             var listAllProduct = products.Skip((page - 1) * pageSize)
                              .Take(pageSize)
                              .ToList();
 
-            var url = getUrlQuery(null, null, null, priceSortOrder, brand, gender, capacity, original);
+            var url = getUrlQuery(null, null, null, priceSortOrder, brand, gender, capacity, original, minPrice, maxPrice);
 
             ViewBag.UrlPage = url.ToString();
 
@@ -545,6 +572,8 @@ namespace LPAShop.NET06.Controllers
             //Truyền dữ liệu thông báo
             ViewBag.Message = MessageStatus;
             ViewBag.Alert = AlertMessage;
+            ViewBag.MinPrice = minPrice;
+            ViewBag.MaxPrice = maxPrice;
 
 
             // Lưu dữ liệu đã checked ở các option filter
@@ -628,17 +657,15 @@ namespace LPAShop.NET06.Controllers
             ViewBag.Alert = AlertMessage;
             return View(listAllProduct);
         }
+        [HttpPost]
+        public IActionResult AddReview(ReviewProduct review)
+        {
+            review.ReviewTime = DateTime.Now; // Gán thời gian hiện tại
+            _context.ReviewProducts.Add(review);
+            _context.SaveChanges(); // Lưu vào database
 
-
-        
-
-
-        
-
-
-
-
-
+            return RedirectToAction("Detail", new { id = review.Product_ID });
+        }
 
     }
 }

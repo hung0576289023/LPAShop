@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "D:\\C#\\LPAShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{195A15FF-11FE-4541-AB7D-4954C43D7439}|LPAShop\\LPAShop.csproj|d:\\c#\\lpashop\\lpashop\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{195A15FF-11FE-4541-AB7D-4954C43D7439}|LPAShop\\LPAShop.csproj|solutionrelative:lpashop\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{195A15FF-11FE-4541-AB7D-4954C43D7439}|LPAShop\\LPAShop.csproj|d:\\c#\\lpashop\\lpashop\\models\\checkoutviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{195A15FF-11FE-4541-AB7D-4954C43D7439}|LPAShop\\LPAShop.csproj|solutionrelative:lpashop\\models\\checkoutviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{195A15FF-11FE-4541-AB7D-4954C43D7439}|LPAShop\\LPAShop.csproj|d:\\c#\\lpashop\\lpashop\\views\\product\\filter.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{195A15FF-11FE-4541-AB7D-4954C43D7439}|LPAShop\\LPAShop.csproj|solutionrelative:lpashop\\views\\product\\filter.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CartController.cs",
-              "DocumentMoniker": "D:\\C#\\LPAShop\\LPAShop\\Controllers\\CartController.cs",
-              "RelativeDocumentMoniker": "LPAShop\\Controllers\\CartController.cs",
-              "ToolTip": "D:\\C#\\LPAShop\\LPAShop\\Controllers\\CartController.cs",
-              "RelativeToolTip": "LPAShop\\Controllers\\CartController.cs",
-              "ViewState": "AgIAALIAAAAAAAAAAAAIwLoAAAAjAAAAAAAAAA==",
+              "Title": "CheckoutViewModel.cs",
+              "DocumentMoniker": "D:\\C#\\LPAShop\\LPAShop\\Models\\CheckoutViewModel.cs",
+              "RelativeDocumentMoniker": "LPAShop\\Models\\CheckoutViewModel.cs",
+              "ToolTip": "D:\\C#\\LPAShop\\LPAShop\\Models\\CheckoutViewModel.cs",
+              "RelativeToolTip": "LPAShop\\Models\\CheckoutViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T07:55:52.443Z",
+              "WhenOpened": "2024-10-16T06:14:20.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Filter.cshtml",
+              "DocumentMoniker": "D:\\C#\\LPAShop\\LPAShop\\Views\\Product\\Filter.cshtml",
+              "RelativeDocumentMoniker": "LPAShop\\Views\\Product\\Filter.cshtml",
+              "ToolTip": "D:\\C#\\LPAShop\\LPAShop\\Views\\Product\\Filter.cshtml",
+              "RelativeToolTip": "LPAShop\\Views\\Product\\Filter.cshtml",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-16T05:20:52.831Z",
               "EditorCaption": ""
             }
           ]

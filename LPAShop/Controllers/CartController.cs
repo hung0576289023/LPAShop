@@ -47,7 +47,7 @@ namespace LPAShop.NET06.Controllers
 
             var cart = _context.Carts.Include(c => c.CartItems).FirstOrDefault(c => c.User_ID == userid);
             
-            // Kiếm tra nếu userid null nghĩa là người dùng chưa đăng, hiển thị thông báo, và điều hướng đến trang Login
+            // Kiếm tra nếu userid null nghĩa là người dùng chưa đăng nhập, hiển thị thông báo, và điều hướng đến trang Login
             if (userid == null)
             {
                 TempData["LoginToAddCart"] = "Hãy đăng nhập vào tài khoản để thêm sản phẩm vào giỏ hàng của bạn";
@@ -164,10 +164,10 @@ namespace LPAShop.NET06.Controllers
                 FullName = "",  // Người dùng sẽ điền thông tin này
                 PhoneNumber = "",
                 Address = "",
-                CartItems = cart.CartItems.ToList(),
+                CartItems = cart.CartItems != null ? cart.CartItems.ToList() : new List<CartItem>(),
                 TotalPrice = cart.CartItems.Sum(item => item.Quantity * item.Product_Price)
             };
-
+            HttpContext.Session.SetInt32("count", cart.CartItems.Count);
             return View(checkoutViewModel);
         }
         [HttpPost]
@@ -207,9 +207,16 @@ namespace LPAShop.NET06.Controllers
 
                 // Xóa giỏ hàng sau khi đặt hàng thành công
                 var cart = _context.Carts.Include(c => c.CartItems).FirstOrDefault(c => c.User_ID == userId);
-                _context.CartItems.RemoveRange(cart.CartItems);
-                _context.SaveChanges();
+                if (cart != null)
+                {
+                    _context.CartItems.RemoveRange(cart.CartItems);
+                    _context.SaveChanges();
 
+                    // Xóa session giỏ hàng sau khi đặt hàng
+                    HttpContext.Session.SetInt32("count", 0);
+                }
+
+                TempData["OrderSuccess"] = "Đặt hàng thành công!";
                 return RedirectToAction("OrderSuccess");
             }
 

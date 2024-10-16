@@ -2,67 +2,99 @@
 
 @{
     ViewData["Title"] = "Thanh toán";
+    ViewData["UserID"] = ViewBag.UserID;
+    ViewData["UserName"] = ViewBag.UserName;
+    ViewData["CountCart"] = ViewBag.CountCart;
 }
 
-<h2>Thanh toán</h2>
+<div class="container" style="max-width: 800px; margin: 50px auto;">
+    <div class="content-header">
+        <nav aria-label="breadcrumb" class="breadcrumb-des">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#" class="breadcrumb-item-title">Trang chủ</a></li>
+                <li class="breadcrumb-item active breadcrumb-item-des" aria-current="page">Thanh toán</li>
+            </ol>
+            <hr>
+        </nav>
+    </div>
 
-<div class="checkout-container">
-    <form method="post" asp-action="ConfirmOrder">
-        <!-- Thông tin người nhận -->
-        <h4>Thông tin người nhận</h4>
-        <div class="form-group">
-            <label for="FullName">Họ và tên:</label>
-            <input type="text" class="form-control" id="FullName" name="FullName" value="@Model.FullName" required />
-        </div>
-        <div class="form-group">
-            <label for="PhoneNumber">Số điện thoại:</label>
-            <input type="tel" class="form-control" id="PhoneNumber" name="PhoneNumber" value="@Model.PhoneNumber" required />
-        </div>
-        <div class="form-group">
-            <label for="Address">Địa chỉ giao hàng:</label>
-            <textarea class="form-control" id="Address" name="Address" rows="3" required>@Model.Address</textarea>
-        </div>
+    <div class="content-nd">
+        <div class="checkout-content" style="margin-top: 30px; padding: 30px; border: 1px solid #ddd; border-radius: 8px;">
+            <h2 style="font-size: 28px; font-weight: bold; margin-bottom: 20px; text-align: center;">Thanh toán</h2>
 
-        <!-- Phương thức thanh toán -->
-        <h4>Phương thức thanh toán</h4>
-        <div class="form-group">
-            <label for="PaymentMethod">Chọn phương thức thanh toán:</label>
-            <select class="form-control" id="PaymentMethod" name="PaymentMethod" required>
-                <option value="COD">Thanh toán khi nhận hàng (COD)</option>
-                <option value="BankTransfer">Chuyển khoản ngân hàng</option>
-                <option value="OnlinePayment">Thanh toán trực tuyến</option>
-            </select>
+            <form method="post" asp-action="ConfirmOrder">
+                @Html.AntiForgeryToken()
+
+                <!-- Thông tin người nhận -->
+                <h4 class="section-title" style="font-size: 22px; font-weight: bold; margin-bottom: 15px;">Thông tin người nhận</h4>
+                <div class="form-group mb-3">
+                    <label for="FullName" class="form-label">Họ và tên:</label>
+                    <input type="text" class="form-control" id="FullName" name="FullName" value="@Model.FullName" required />
+                </div>
+                <div class="form-group mb-3">
+                    <label for="PhoneNumber" class="form-label">Số điện thoại:</label>
+                    <input type="tel" class="form-control" id="PhoneNumber" name="PhoneNumber" value="@Model.PhoneNumber" required />
+                </div>
+                <div class="form-group mb-3">
+                    <label for="Address" class="form-label">Địa chỉ giao hàng:</label>
+                    <textarea class="form-control" id="Address" name="Address" rows="3" required></textarea>
+                </div>
+
+                <!-- Phương thức thanh toán -->
+                <h4 class="section-title" style="font-size: 22px; font-weight: bold; margin-bottom: 15px;">Phương thức thanh toán</h4>
+                <div class="form-group mb-3">
+                    <label for="PaymentMethod" class="form-label">Chọn phương thức thanh toán:</label>
+                    <select class="form-control" id="PaymentMethod" name="PaymentMethod" required>
+                        <option value="COD">Thanh toán khi nhận hàng (COD)</option>
+                        <option value="BankTransfer">Chuyển khoản ngân hàng</option>
+                        <option value="OnlinePayment">Thanh toán trực tuyến</option>
+                    </select>
+                </div>
+
+                <!-- Thông tin đơn hàng -->
+                <h4 class="section-title" style="font-size: 22px; font-weight: bold; margin-bottom: 15px;">Thông tin đơn hàng</h4>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Tên sản phẩm</th>
+                            <th>Số lượng</th>
+                            <th>Giá</th>
+                            <th>Thành tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.CartItems != null && Model.CartItems.Any())
+                        {
+                            @foreach (var item in Model.CartItems)
+                            {
+                                <tr>
+                                    <td>@item.Product_Name</td>
+                                    <td>@item.Quantity</td>
+                                    <td>@item.Product_Price.ToString("C0")</td>
+                                    <td>@(item.Quantity * item.Product_Price)</td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="4" class="text-center">Giỏ hàng trống</td>
+                            </tr>
+                        }
+                        <tr>
+                            <td colspan="3" class="text-end font-weight-bold">Tổng tiền:</td>
+                            <td class="font-weight-bold">@Model.TotalPrice</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Xác nhận đơn hàng -->
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-dark btn-lg" style="margin-top: 20px;">
+                        Xác nhận đơn hàng
+                    </button>
+                </div>
+            </form>
         </div>
-
-        <!-- Thông tin đơn hàng -->
-        <h4>Thông tin đơn hàng</h4>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Tên sản phẩm</th>
-                    <th scope="col">Số lượng</th>
-                    <th scope="col">Giá</th>
-                    <th scope="col">Thành tiền</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model.CartItems)
-                {
-                    <tr>
-                        <td>@item.Product_Name</td>
-                        <td>@item.Quantity</td>
-                        <td>@item.Product_Price
-                        <td>@(item.Quantity * item.Product_Price)
-                    </tr>
-                }
-                <tr>
-                    <td colspan="3"><strong>Tổng tiền:</strong></td>
-                    <td><strong>@Model.TotalPrice.ToString("C0")
-                </tr>
-            </tbody>
-        </table>
-
-        <!-- Xác nhận đơn hàng -->
-        <button type="submit" class="btn btn-primary">Xác nhận đơn hàng</button>
-    </form>
+    </div>
 </div>

@@ -60,6 +60,26 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingPriceRange">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsePriceRange" aria-expanded="true" aria-controls="panelsStayOpen-collapsePriceRange">
+                                    Khoảng giá
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapsePriceRange" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingPriceRange">
+                                <div class="accordion-body">
+                                    <div class="mb-3">
+                                        <label for="minPrice" class="form-label">Giá thấp nhất</label>
+                                        <input type="number" class="form-control" name="minPrice" id="minPrice" min="0" value="@Context.Request.Query["minPrice"]" placeholder="0 đ">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="maxPrice" class="form-label">Giá cao nhất</label>
+                                        <input type="number" class="form-control" name="maxPrice" id="maxPrice" min="0" value="@Context.Request.Query["maxPrice"]" placeholder="50.000.000 đ">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
 
                         @*Thương hiệu*@
                         <div class="accordion-item">
@@ -134,7 +154,7 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="panelsStayOpen-heading5">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5" aria-expanded="true" aria-controls="panelsStayOpen-collapse5">
-                                    Nhãn hiệu
+                                    Hệ điều hành
                                 </button>
                             </h2>
                             <div id="panelsStayOpen-collapse5" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-heading5">
@@ -325,7 +345,7 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-heading5">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5" aria-expanded="true" aria-controls="panelsStayOpen-collapse5">
-                            Xuất xứ
+                            Hệ điều hành
                         </button>
                     </h2>
                     <div id="panelsStayOpen-collapse5" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-heading5">
